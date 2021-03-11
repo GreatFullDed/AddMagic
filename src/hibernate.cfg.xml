@@ -43,11 +43,12 @@ Contributor(s):
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://192.168.0.122:3306/dndthings2?serverTimezone=UTC</property>
+    <property name="hibernate.connection.url">jdbc:mysql://25.30.67.168:3306/dndthings2?serverTimezone=UTC</property>
     <property name="hibernate.connection.username">DndThinger</property>
     <property name="hibernate.connection.password">1234</property>
-    <mapping class="moduls.Hiber"/>
     <mapping class="moduls.Magic"/>
     <mapping class="moduls.School"/>
+    <mapping class="moduls.Clas"/>
+    <mapping class="moduls.Magicclass"/>
   </session-factory>
 </hibernate-configuration>

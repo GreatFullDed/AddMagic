@@ -1,7 +1,9 @@
 package moduls;
-// Generated 24.02.2021 14:05:56 by Hibernate Tools 4.3.1
+// Generated 10.03.2021 11:07:24 by Hibernate Tools 4.3.1
 
 
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -10,6 +12,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -32,14 +35,15 @@ public class Magic  implements java.io.Serializable {
      private String duration;
      private String damage;
      private String about;
+     private Set<Magicclass> magicclasses = new HashSet<Magicclass>(0);
 
     public Magic() {
     }
 
-    public Magic(String name, Integer lvl, School school, String custTime, String distance, String components, String duration, String damage, String about) {       
+    public Magic(String name, Integer lvl, School school, String custTime, String distance, String components, String duration, String damage, String about) {
+       this.school = school;
        this.name = name;
        this.lvl = lvl;
-       this.school = school;       
        this.custTime = custTime;
        this.distance = distance;
        this.components = components;
@@ -71,7 +75,7 @@ public class Magic  implements java.io.Serializable {
     }
 
     
-    @Column(name="Name", length=45)
+    @Column(name="Name", length=150)
     public String getName() {
         return this.name;
     }
@@ -131,7 +135,7 @@ public class Magic  implements java.io.Serializable {
     }
 
     
-    @Column(name="Damage", length=20)
+    @Column(name="Damage", length=90)
     public String getDamage() {
         return this.damage;
     }
@@ -148,6 +152,15 @@ public class Magic  implements java.io.Serializable {
     
     public void setAbout(String about) {
         this.about = about;
+    }
+
+@OneToMany(fetch=FetchType.LAZY, mappedBy="magic")
+    public Set<Magicclass> getMagicclasses() {
+        return this.magicclasses;
+    }
+    
+    public void setMagicclasses(Set<Magicclass> magicclasses) {
+        this.magicclasses = magicclasses;
     }
 
 

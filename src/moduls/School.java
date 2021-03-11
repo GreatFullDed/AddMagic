@@ -1,5 +1,5 @@
 package moduls;
-// Generated 24.02.2021 14:05:56 by Hibernate Tools 4.3.1
+// Generated 10.03.2021 11:07:24 by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -71,11 +71,11 @@ public class School  implements java.io.Serializable {
 
     @Override
     public String toString() {
-        return this.getName();
+        return getName();
     }
 
-
     
+
 
 
 }

@@ -5,6 +5,8 @@
  */
 package moduls;
 
+import addmagic.NewJFrame;
+import javax.swing.JLabel;
 import org.hibernate.Session;
 import org.hibernate.cfg.AnnotationConfiguration;
 import org.hibernate.SessionFactory;
@@ -69,5 +71,5 @@ public class Hiber {
             System.out.println("Всё плохо");
         }
     }
-    
+
 }

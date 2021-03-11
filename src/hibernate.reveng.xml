@@ -43,4 +43,6 @@ Contributor(s):
   <schema-selection match-catalog="dndthings2"/>
   <table-filter match-name="magic"/>
   <table-filter match-name="school"/>
+  <table-filter match-name="clas"/>
+  <table-filter match-name="magicclass"/>
 </hibernate-reverse-engineering>
